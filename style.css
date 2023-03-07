@@ -1,0 +1,209 @@
+:root {
+  --primary: #463522;
+  --secondary: #dd7231;
+  --base-white: #fff;
+}
+h1 {
+  font-size: 3.583rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 16px;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(images/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero .logomark svg {
+  position: relative;
+  fill: var(--base-white);
+  width: 30px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  transform: scale(1);
+}
+.hero svg {
+  position: relative;
+  fill: var(--primary);
+  width: 30px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  transform: scale(1);
+}
+label {
+  display: none;
+}
+#check {
+  z-index: 3;
+  display: none;
+}
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  position: relative;
+  color: var(--primary);
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--base-white);
+  padding: 24px 30px;
+}
+.navbar a {
+  color: var(--primary);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+.navbar a:hover {
+  background: var(--base-white);
+}
+.content {
+  max-width: 600px;
+  margin: 60px 100px;
+}
+.content .info h1 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.75px;
+  line-height: 55px;
+  margin-bottom: 25px;
+}
+.content .info h1 span {
+  color: var(--base-white);
+  font-size: 3.25rem;
+  font-weight: 600;
+}
+.content .info p {
+  color: var(--base-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+.content .info .btn {
+  color: var(--base-white);
+  background-color: var(--secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.content .info .btn:hover {
+  background-color: #e38449;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.icon svg {
+  position: relative;
+  fill: var(--base-white);
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  transform: scale(1);
+  transition: fill 0.3s;
+}
+.icon svg:hover {
+  fill: var(--secondary);
+}
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+  header .navbar {
+    display: none;
+  }
+  label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: fill;
+  }
+  label svg:hover {
+    fill: var(--base-white);
+  }
+  label .close-btn {
+    position: absolute;
+    display: none;
+  }
+  #check:checked ~ header .navbar {
+    z-index: 2;
+    position: fixed;
+    background-color: rgba(121, 85, 42, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #check:checked ~ header .navbar a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+  #check:checked ~ header label .menu-btn {
+    display: none;
+  }
+  #check:checked ~ header label .close-btn {
+    z-index: 2;
+    display: block;
+    position: fixed;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header {
+    padding: 30px 25px;
+  }
+  .content {
+    max-width: 650px;
+    margin: 60px 25px;
+  }
+  .hero {
+    background-size: cover;
+    background-position: 60% 0;
+  }
+}
