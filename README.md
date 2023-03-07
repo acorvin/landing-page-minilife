@@ -6,7 +6,7 @@ This project is a simple landing page design layout promoting a tiny house livin
 
 ![Preview of the minimalist blog design](https://github.com/acorvin/landing-page-minilife/blob/main/preview-minilife.png?raw=true)
 
-You can also see a live demo of the project [here](https://acorvin.github.io/minilife/).
+You can also see a live demo of the project [here](https://acorvin.github.io/landing-page-minilife/).
 
 ## Getting Started
 
